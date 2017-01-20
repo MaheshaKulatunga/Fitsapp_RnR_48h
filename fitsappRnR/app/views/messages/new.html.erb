@@ -1,0 +1,17 @@
+<h1> New Post </h1>
+
+<%= form_for @message do |f| %>
+
+  <%= f.hidden_field :sender , :value => "You" %>
+
+  <%= f.label :receiver %> <br>
+  <%= f.text_field :receiver %> <br>
+  <br>
+  <%= f.label :subject %> <br>
+  <%= f.text_field :subject %> <br>
+  <br>
+  <%= f.label :body %> <br>
+  <%= f.text_area :body %> <br>
+  <br>
+  <%= f.submit %>
+<% end %>
