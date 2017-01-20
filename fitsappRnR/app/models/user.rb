@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :messages
+  belongs_to :type #, class_name: "User"
+
+  #validates :type_id, presence: true, allow_nil: true
 end
