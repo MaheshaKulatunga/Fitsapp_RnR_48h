@@ -1,11 +1,24 @@
 <h1>Messages</h1>
-
+<h2> Sent messages <h2>
 <% @messages.each do |message| %>
-  <p> <%= message.sender %> <p>
-  <h2> <%= message.subject %> <h2>
-  <p> <%= message.body %> <p>
-
+  <% if message.user == current_user%>
+    <p> <%= message.user.email %> <p>
+    <p><%= message.subject %> <p>
+    <p> <%= message.body %> <p>
+    <%= link_to "Read", message %>
+  <%end%>
   <br>
-  <%= link_to "Read", message %>
+
+<%end %>
+<br>
+<h2> Received messages <h2>
+<% @messages.each do |message| %>
+  <% if message.receiver == current_user.email%>
+    <p> <%= message.user.email %> <p>
+    <p><%= message.subject %> <p>
+    <p> <%= message.body %> <p>
+    <%= link_to "Read", message %>
+  <%end%>
+  <br>
 
 <%end %>
