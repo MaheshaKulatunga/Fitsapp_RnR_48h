@@ -9,6 +9,7 @@
   - Bootstrap(3.3.6): Used for styling
   - Rails admin(1.0): Used to allow admin users to manage all accounts. This gem is a well documented and supported gem that provides a complete web app management dashboard.
     https://github.com/sferik/rails_admin/wiki
+  - Simple form 
 
 * Configuration
   - Navigate to the fitsappRnR folder via the command line, run the following commands
