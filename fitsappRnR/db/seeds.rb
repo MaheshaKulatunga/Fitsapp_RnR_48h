@@ -7,5 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #Default categories
+User.create(email: 'admin@default.com', password:'12341234', admin:'t')
+
 Type.create(name: 'Trainer')
 Type.create(name: 'User')

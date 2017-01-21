@@ -7,8 +7,9 @@ end
 
 gem 'haml-rails'
 
-#Authentication
+#Authentication & Admin
 gem 'devise', '~> 4.2'
+gem 'rails_admin', '~> 1.0'
 
 #Styling
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
