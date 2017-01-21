@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FitsappRnR
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = link_to "Home", root_path, :class => "btn"
+    = link_to "Chat", messages_path, :class => "btn"
+    = link_to "New Message", new_message_path, :class => "btn"
+    - if user_signed_in?
+      = link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "btn"
+    - else
+      = link_to "Log In", new_user_session_path, :class => "btn"
+      = link_to "Sign Up", new_user_registration_path, :class => "btn"
+    %br/
+
+
+    %p.container.notice= notice
+    %p.container.alert= alert
+    = yield

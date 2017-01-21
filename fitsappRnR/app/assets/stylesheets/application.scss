@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+.login_signup_area {
+  text-align: center;
+}
+
+.center_heading{
+  text-align: center;
+  align: center;
+}
+
+a {
+  color: #45B0AB;
+}
+
+
+.notice, .alert {
+  text-align: center;
+  color: #45B0AB;
+}
+
+.btn-success{
+  background-color: #45B0AB;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #5ec9c5;
+}
+
+textarea {
+  height: 250px;
+  width: 750px;
+}
+
+.form_field {
+  margin: 5px;
+}
+
+.divider {
+  width: 100%;
+}

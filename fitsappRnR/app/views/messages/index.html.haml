@@ -1,0 +1,35 @@
+.container
+  %h1.center_heading Messages
+  %h2.center_heading Received messages
+  .jumbotron
+    %p
+    - @messages.each do |message|
+      - if message.receiver == current_user.email
+        %h3
+          From
+        %p
+          = message.user.email
+        %h2
+          = message.subject
+        %p
+          = message.body
+        %p
+          = link_to "Read", message
+        %hr.line
+
+  %h2.center_heading Sent messages
+  .jumbotron
+    %p
+    - @messages.each do |message|
+      - if message.user == current_user
+        %h3
+          To
+        %p
+          = message.receiver
+        %h2
+          = message.subject
+        %p
+          = message.body
+        %p
+          = link_to "Read", message
+        %hr.line

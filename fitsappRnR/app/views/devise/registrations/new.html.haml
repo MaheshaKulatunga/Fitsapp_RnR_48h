@@ -1,0 +1,28 @@
+%head
+.container
+  .col-sm-4
+  .jumbotron.col-sm-4
+    .login_signup_area
+      %body
+        %h1 Sign up
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .field
+            = f.label :email, :class => "form_field"
+            %br/
+            = f.email_field :email, autofocus: true, :class => "form_field"
+          .field
+            = f.collection_select :type_id, Type.all, :id, :name, {promt: "Choose a account type"}, :class => "form_field"
+          .field
+            = f.label :password
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length} characters minimum)
+            %br/
+            = f.password_field :password, autocomplete: "off", :class => "form_field"
+          .field
+            = f.label :password_confirmation, :class => "form_field"
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "off", :class => "form_field"
+          .actions
+            = f.submit "Sign up", :class => "btn btn-success"
