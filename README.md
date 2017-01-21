@@ -15,9 +15,7 @@ https://github.com/sferik/rails_admin/wiki
 
 $bundle install
 
-$rake db:migrate
-
-$rake db:seed
+$rake db:setup
 
 Default login details:
 Email: admin@test.com
