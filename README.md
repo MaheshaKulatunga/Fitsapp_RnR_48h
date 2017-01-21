@@ -5,8 +5,10 @@
 
 * Main gems used
 - Devise(4.2): Used for user account authentication
+https://github.com/plataformatec/devise
 - Bootstrap(3.3.6): Used for styling
 - Rails admin(1.0): Used to allow admin users to manage all accounts. This gem is a well documented and supported gem that provides a complete web app management dashboard.
+https://github.com/sferik/rails_admin/wiki
 
 * Configuration
 - Navigate to the fitsappRnR folder via the command line, run the following commands
