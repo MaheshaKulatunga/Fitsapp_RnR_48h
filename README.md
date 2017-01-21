@@ -18,7 +18,7 @@ $bundle install
 $rake db:setup
 
 Default login details:
-Email: admin@test.com
+Email: admin@default.com
 Password: 12341234
 
 * To run
