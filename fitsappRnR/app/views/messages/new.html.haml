@@ -1,7 +1,7 @@
 .container
   %h1 New message
   = form_for @message do |f|
-    = f.hidden_field :sender , :value => "You"
+    = f.hidden_field :sender , :value => current_user.email
     = f.label :receiver
     %br/
     = f.text_field :receiver
